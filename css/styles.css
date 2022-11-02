@@ -1,0 +1,100 @@
+body {
+    background-color: darkgray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn {
+    border: none;
+    color: #ddd;
+    padding: 10px;
+    inline-size: 40px;
+    block-size: 40px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+    cursor: pointer;
+}
+.btn:active {
+    transform: scale(.9);
+}
+
+#play {
+    background-image: url(../images/play.svg)
+
+}
+#pause {
+    background-image: url(../images/pause.svg);
+
+}
+#backward {
+    background-image: url(../images/-10.svg);
+
+}
+#forward {
+    background-image: url(../images/+10.svg);
+
+}
+
+
+.wrapper {
+    max-inline-size: 900px;
+    margin: auto;
+    background-color: rgb(8, 107, 206);
+}
+
+.player {
+    margin-block-start: 100px;
+    position: relative;
+    border: 2px solid white;
+}
+
+.player video {
+    inline-size: 100%;
+    aspect-ratio: 16/9;
+    vertical-align: middle;
+}
+
+.player-title {
+    color: white;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 20px;
+
+}
+.player-actions {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: start;
+    margin: 40px 10px;
+    align-items: flex-end;
+}
+.player-progress {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: 0;
+    display: flex;
+    padding: 10px;
+    margin: 0 10px;
+}
+.player-progress input {
+    flex: 1;
+}
+.player-overlay {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 1s opacity;
+}
+
+.player:hover .player-overlay {
+    opacity: 1;
+}
+
+
+
+
+
+
+
